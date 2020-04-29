@@ -2,10 +2,7 @@ var addMessage = ""
 var patient = ""
 var addedMessage = ""
 var query = ""
-var queryTwo = ""
 var req = ""
-var reqTwo = ""
-var patientTwo = ""
 var patientName = ""
 var patientStreet= ""
 var patientCity = ""
@@ -31,15 +28,12 @@ btnAddAccount.onclick=function(){
   
  if (req.status==200){
       if(req.responseText==500){
-            queryTwo = 'SELECT name FROM doctor'
-            reqTwo =Ajax('https://ormond.creighton.edu/courses/375/ajax-connection.php', 'POST', 'host=ormond.creighton.edu&user=pov46864&pass=Pv8676138796&database=375groupa4&query=' + query) 
-            patientTwo=JSON.parse(req.responseText)
+            query = 'SELECT name FROM patient'
+            req =Ajax('https://ormond.creighton.edu/courses/375/ajax-connection.php', 'POST', 'host=ormond.creighton.edu&user=pov46864&pass=Pv8676138796&database=375groupa4&query=' + query) 
+            patient=JSON.parse(req.responseText)
         if(req.status==200){
-          let addedMessage='The doctor was added. New Doctor List:'
-                for(i=0;i<=patient.length-1;i++){
-                                addedMessage= addedMessage + doctor[i][1] + "\n\n"
-                                lblCreatedAccount.value = addedMessage
-                    }
+                    let addedMessage='You have succesfully created an account. Please return to our homepage.'
+                    lblCreatedAccount.value = addedMessage
           } else{
                       lblCreatedAccount.value = `There was an error with code ${req.status}`
           }
