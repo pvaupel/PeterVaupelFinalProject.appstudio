@@ -109,6 +109,14 @@
             "CreateHealthAccount",
             "CreateHealthAccount.json"
           ]
+        },
+        {
+          "!type": "External",
+          "file": [
+            "forms",
+            "DoctorNear",
+            "DoctorNear.json"
+          ]
         }
       ],
       "configxml": null,

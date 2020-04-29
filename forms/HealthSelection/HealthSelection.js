@@ -13,3 +13,7 @@ btnPhysicalHealth.onclick=function(){
 btnCreateAccount.onclick=function(){
   ChangeForm(CreateHealthAccount)
 }
+
+btnFindDoctor.onclick=function(){
+  ChangeForm(DoctorNear)
+}
